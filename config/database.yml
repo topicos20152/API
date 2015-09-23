@@ -18,6 +18,8 @@ development:
   database: teamtracker_development
 
 test:
-  <<: *default
-  database: teamtracker_test
-  min_messages: WARNING
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
