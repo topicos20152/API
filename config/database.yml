@@ -9,7 +9,7 @@ default: &default
   reconnect: false
   encoding: utf8
   pool: 5
-  username: postgres
+  username: topicos_api
   password:
   host: localhost
 
