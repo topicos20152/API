@@ -15,7 +15,8 @@ default: &default
 
 development:
   <<: *default
-  database: teamtracker_development
+  adapter: sqlite3
+  database: topicos_api_development
 
 test:
   adapter: postgresql
