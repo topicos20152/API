@@ -1,4 +1,11 @@
-## How to install
+# How to install
+
+## Install MongoDB
+
+1. Follow the instructions on https://www.mongodb.org/downloads#production
+
+## Install Application
+
 1. Instalar RVM (https://rvm.io/rvm/install) que inclui o Ruby;
 2. Instalar o Rails: `gem install rails`;
 3. Clonar repositorio - `git clone https://github.com/topicos20152/API.git`
@@ -8,7 +15,8 @@
 5. Acessar url: http://127.0.0.1:3000/admin
 
 
-## How to code
+# How to code
+
 Follow this if you want to contribute.
 
 1. Choose a issue and comment on it telling the people you will make it.
