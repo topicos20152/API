@@ -2,7 +2,7 @@
 1. Instalar RVM (https://rvm.io/rvm/install) que inclui o Ruby;
 2. Instalar o Rails: `gem install rails`;
 3. Clonar repositorio - `git clone https://github.com/topicos20152/API.git`
-4. Acessar a pasta do projeto: cd API;
+4. Acessar a pasta do projeto: `cd API`;
 3. Instalar as dependencias do projeto: `bundle install`;
 4. Executar o servidor web: `rails s`;
 5. Acessar url: http://127.0.0.1:3000/admin
