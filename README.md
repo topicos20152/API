@@ -1,3 +1,11 @@
+# How to install
+
+## Install MongoDB
+
+1. Follow the instructions on https://www.mongodb.org/downloads#production
+
+## Install Application
+
 ## How to install
 1. Install RVM (https://rvm.io/rvm/install) which includes Ruby;
 2. Install Rails: `gem install rails`;
@@ -7,8 +15,8 @@
 4. Run the local server: `rails s`;
 5. Open: http://127.0.0.1:3000/admin
 
+# How to code
 
-## How to code
 Follow this if you want to contribute.
 
 1. Choose a issue and comment on it telling the people you will make it.
@@ -19,7 +27,3 @@ Follow this if you want to contribute.
 6. Create a Pull-request, from your branch to the Master.
 7. Wait for people to revise and apply his changes.
 8. Merge the Pull-request and close the issue.
-
-
-
-
