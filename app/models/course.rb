@@ -1,5 +1,7 @@
 class Course
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :title, type: String
 
   has_many :tasks

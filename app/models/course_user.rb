@@ -1,5 +1,7 @@
 class CourseUser
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :user_id, type: String
   field :course_id, type: String
 

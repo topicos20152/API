@@ -1,5 +1,7 @@
 class Task
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
   field :status, type: String
   field :delivery_date, type: Time
   field :title, type: String
