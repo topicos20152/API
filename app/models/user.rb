@@ -3,4 +3,6 @@ class User
   field :username, type: String
   field :sigaa_uuid, type: String
   field :name, type: String
+
+  has_many :tasks
 end

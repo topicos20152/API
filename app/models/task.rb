@@ -5,5 +5,7 @@ class Task
   field :title, type: String
   field :description, type: String
   field :attachment, type: String
-  embedded_in :course
+  field :course_id, type: String
+
+  belongs_to :course
 end

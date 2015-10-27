@@ -1,5 +1,8 @@
 class CourseUser
   include Mongoid::Document
-  embedded_in :user
-  embedded_in :course
+  field :user_id, type: String
+  field :course_id, type: String
+
+  belongs_to :user
+  belongs_to :course
 end
