@@ -4,5 +4,6 @@ class User
   field :sigaa_uuid, type: String
   field :name, type: String
 
-  has_many :tasks
+  has_many :course_users
+  has_many :user_tasks
 end

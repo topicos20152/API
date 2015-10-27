@@ -8,4 +8,6 @@ class Task
   field :course_id, type: String
 
   belongs_to :course
+
+  has_many :user_tasks
 end
