@@ -1,3 +1,49 @@
+# API Service
+
+## Tasks
+
+
+i. Get all tasks
+
+ii. Get a single task
+
+
+### Get all tasks
+
+```GET  topicos-api.herokuapp.com/tasks```
+
+
+#### Response
+
+
+    {
+      "id":"562ee1e0ef5842739000002d",
+      "title":"Some Title",
+      "course_title":"Some Course Title",       
+      "delivery_date":"2015-10-27T02:30:56.306Z"
+    }
+
+
+### Get a single task
+
+```GET  topicos-api.herokuapp.com/tasks/:task_id```
+
+
+#### Response
+
+
+    {
+      "id":"562ee1e0ef5842739000002d",
+      "title":"Some Title",
+      "course_title":"Topicos I",
+      "status":"open",
+      "delivery_date":"2015-10-27T02:30:56.306Z",
+      "description":"Some Description",
+      "attachment":"Some URL"
+    }
+
+
+
 # How to install
 
 ## Install MongoDB
