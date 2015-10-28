@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:update, :destroy]
+  before_action :set_user, only: [:update, :destroy, :request_access_token]
+  before_filter :set_default_response_format
 
   # POST /users
   # POST /users.json
@@ -31,8 +32,20 @@ class UsersController < ApplicationController
     end
   end
 
+  # POST /users/1
+  def request_access_token
+    @access_token = @user.generate_access_token
+    unless @user.save
+      render json: @user.erros, status: :unprocessable_entity
+    end
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+    def set_default_response_format
+      request.format = :json
+    end
+
     def set_user
       @user = User.find(params[:id])
     end
