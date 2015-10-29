@@ -42,6 +42,50 @@ ii. Get a single task
       "attachment":"Some URL"
     }
 
+## Authentication
+
+i. Request access token
+
+### Request access token
+
+Save the token value to access user related data
+
+```POST  topicos-api.herokuapp.com/users/:user_id/request_access_token```
+
+#### Response
+
+
+    {
+      "value":"some-token",
+      "expire_date":"2015-10-27T02:30:56.306Z"
+    }
+
+## Users
+
+i. Get user tasks
+
+### Request access token
+
+```POST  topicos-api.herokuapp.com/users/:user_id/tasks```
+
+##### Parameters
+
+|      Name      |  Type  |               Description               |
+| -------------- | ------ | --------------------------------------- |
+| access_token   | string | Previously requested access token value |
+
+
+#### Response
+
+
+    {
+      "id":"562ee1e0ef5842739000002d",
+      "title":"Some Title",
+      "course_title":"Some Course Title",       
+      "delivery_date":"2015-10-27T02:30:56.306Z"
+    }
+
+
 
 
 # How to install
