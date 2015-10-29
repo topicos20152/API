@@ -17,4 +17,17 @@ class User
     access_token = self.access_tokens.build(value: SecureRandom.urlsafe_base64(nil, false), expire_date: DateTime.tomorrow)
     access_token
   end
+
+  def check_access_token access_token
+    return self.access_tokens.active.where(value: access_token).size >= 1
+  end
+
+  def tasks
+    tasks = []
+    self.course_users.map(&:course).each do |course|
+      tasks += course.tasks
+    end
+    tasks
+  end
+
 end

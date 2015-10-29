@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   
   resources :users, :only => [:create, :update] do 
     member do
-      get :request_access_token
+      post :request_access_token
+      get :tasks
     end
   end
   resources :tasks, :only => [:index, :show]

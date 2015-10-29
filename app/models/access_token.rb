@@ -6,4 +6,6 @@ class AccessToken
   field :expire_date, type: DateTime
 
   embedded_in :user
+
+  scope :active, -> { where(:expire_date.gte => DateTime.now) }
 end
