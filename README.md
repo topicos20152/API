@@ -1,5 +1,8 @@
 # API Service
 
+
+All current database information can be accessed and modified at the admin interface
+
 ## Tasks
 
 
@@ -44,6 +47,7 @@ ii. Get a single task
 
 ## Authentication
 
+
 i. Request access token
 
 ### Request access token
@@ -51,6 +55,8 @@ i. Request access token
 Save the token value to access user related data
 
 ```POST  topicos-api.herokuapp.com/users/:user_id/request_access_token```
+
+##### :user_id can be found in admin interface
 
 #### Response
 
@@ -67,6 +73,8 @@ i. Get user tasks
 ### Request access token
 
 ```POST  topicos-api.herokuapp.com/users/:user_id/tasks```
+
+##### :user_id can be found in admin interface
 
 ##### Parameters
 
@@ -85,7 +93,9 @@ i. Get user tasks
       "delivery_date":"2015-10-27T02:30:56.306Z"
     }
 
+## Admin Interface
 
+```URL http://topicos-api.herokuapp.com/admin ```
 
 
 # How to install
