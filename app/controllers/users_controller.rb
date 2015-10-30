@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user
   before_filter :set_default_response_format
   before_filter :check_token, except: :request_access_token
+  skip_before_filter :verify_authenticity_token
 
   # POST /users
   def create
