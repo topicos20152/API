@@ -70,9 +70,9 @@ Save the token value to access user related data
 
 i. Get user tasks
 
-### Request access token
+### Get user tasks
 
-```POST  topicos-api.herokuapp.com/users/:user_id/tasks```
+```GET  topicos-api.herokuapp.com/users/:user_id/tasks```
 
 ##### :user_id can be found in admin interface
 
