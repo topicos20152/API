@@ -1,11 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 
-  task_id: 
-  score: 1.5
+  message: MyString
 
 two:
-  user_id: 
-  task_id: 
-  score: 1.5
+  message: MyString
