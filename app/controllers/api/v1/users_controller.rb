@@ -14,7 +14,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   # GET /users/1/tasks
 
   def tasks
-    @tasks = @user.tasks(params[:q])
+    @tasks = @user.tasks
     render 'api/v1/tasks/index'
   end
 
@@ -29,7 +29,7 @@ class Api::V1::UsersController < Api::V1::BaseController
         render json: "Invalid access token", status: :unauthorized
       end
     end
-    
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params[:user]
