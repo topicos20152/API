@@ -1,49 +1,8 @@
 # API Service
 
+```URL topicos-api.herokuapp.com```
 
 All current database information can be accessed and modified at the admin interface
-
-## Tasks
-
-
-i. Get all tasks
-
-ii. Get a single task
-
-
-### Get all tasks
-
-```GET  topicos-api.herokuapp.com/tasks```
-
-
-#### Response
-
-
-    {
-      "id":"562ee1e0ef5842739000002d",
-      "title":"Some Title",
-      "course_title":"Some Course Title",       
-      "delivery_date":"2015-10-27T02:30:56.306Z"
-    }
-
-
-### Get a single task
-
-```GET  topicos-api.herokuapp.com/tasks/:task_id```
-
-
-#### Response
-
-
-    {
-      "id":"562ee1e0ef5842739000002d",
-      "title":"Some Title",
-      "course_title":"Topicos I",
-      "status":"open",
-      "delivery_date":"2015-10-27T02:30:56.306Z",
-      "description":"Some Description",
-      "attachment":"Some URL"
-    }
 
 ## Authentication
 
@@ -54,7 +13,7 @@ i. Request access token
 
 Save the token value to access user related data
 
-```POST  topicos-api.herokuapp.com/users/:user_id/request_access_token```
+```POST  /api/v1/users/:user_id/request_access_token```
 
 ##### :user_id can be found in admin interface
 
@@ -72,7 +31,7 @@ i. Get user tasks
 
 ### Get user tasks
 
-```GET  topicos-api.herokuapp.com/users/:user_id/tasks```
+```GET  /api/v1/users/:user_id/tasks```
 
 ##### :user_id can be found in admin interface
 
@@ -90,12 +49,37 @@ i. Get user tasks
       "id":"562ee1e0ef5842739000002d",
       "title":"Some Title",
       "course_title":"Some Course Title",       
-      "delivery_date":"2015-10-27T02:30:56.306Z"
+      "opened_date" : "2015-10-27T02:30:56.306Z",
+      "delivery_date":"2015-10-27T02:30:56.306Z",
+      "answers": 2,
+    }
+
+## Tasks
+
+i. Get a single task
+
+### Get a single task
+
+```GET  /api/v1/tasks/:task_id```
+
+
+#### Response
+
+
+    {
+      "id":"562ee1e0ef5842739000002d",
+      "title":"Some Title",
+      "course_title":"Topicos I",
+      "opened_date" : "2015-10-27T02:30:56.306Z",
+      "delivery_date":"2015-10-27T02:30:56.306Z",
+      "description":"Some Description",
+      "attachment":"Some URL",
+      "answers": [ Answer, Answer ]
     }
 
 ## Admin Interface
 
-```URL http://topicos-api.herokuapp.com/admin ```
+```URL /admin```
 
 
 # How to install

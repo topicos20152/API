@@ -7,7 +7,7 @@ class User
   field :name, type: String
 
   has_many :course_users
-  has_many :user_tasks
+  has_many :answers
 
   embeds_many :access_tokens
 

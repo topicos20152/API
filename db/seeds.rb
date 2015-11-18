@@ -25,13 +25,6 @@ end
 
 Course.each do |course|
   3.times do |n|
-    Task.create status: "open", delivery_date: Time.now, title: "Some Title", description: "Some Description", attachment: "Some URL", course: course
-  end
-end
-
-
-User.all.sample(7).each do |user|
-  Task.all.sample(2).each do |task|
-    UserTask.create user: user, task: task
+    Task.create title: "Some Title", description: "Some Description", attachment: "Some URL", opened_date: Time.now, delivery_date: Time.now, course: course
   end
 end
