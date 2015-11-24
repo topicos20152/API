@@ -1,6 +1,6 @@
 class Api::V1::UsersController < Api::V1::BaseController
   before_action :set_user
-  before_filter :check_token, except: :request_access_token
+  #before_filter :check_token, except: :request_access_token
 
 
   # POST /users/1
