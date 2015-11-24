@@ -4,7 +4,7 @@ class Api::V1::TasksController < Api::V1::BaseController
   # GET /tasks/1
   def show
     @user = User.find(params[:user_id]) if params[:user_id]
-    @user.check_task(@task) if @user
+    @user.check_task(@task, @user) if @user
   end
 
   private
