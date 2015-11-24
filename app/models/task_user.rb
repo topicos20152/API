@@ -4,6 +4,7 @@ class TaskUser
 
 	field :task_id, type: String
 	field :user_id, type: String
+	field :readed, type: boolean
 
 	belongs_to :task
 	belongs_to :user
