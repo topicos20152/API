@@ -62,6 +62,10 @@ i. Get a single task
 
 ```GET  /api/v1/tasks/:task_id```
 
+### Mark a task as read
+
+```GET /api/v1/tasks/:task_id?user_id=?```
+
 
 #### Response
 
