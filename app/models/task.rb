@@ -11,5 +11,5 @@ class Task
   belongs_to :course
 
   has_many :answers
-  has_many :task_user
+  has_many :task_users
 end

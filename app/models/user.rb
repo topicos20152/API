@@ -8,7 +8,7 @@ class User
 
   has_many :course_users
   has_many :answers
-  has_many :task_user
+  has_many :task_users
 
   embeds_many :access_tokens
 
@@ -31,9 +31,9 @@ class User
     tasks
   end
 
-  def check_task(task, user)
-    @task_user = TaskUser.where(user:@user, task:@task).first_or_create
-    @task_user.readed = true
+  def check_task(task)
+    task_user = task_users.where(task:@task).first_or_create
+    task_user.read = true
     task_user.save
     puts "SAVED"
   end
