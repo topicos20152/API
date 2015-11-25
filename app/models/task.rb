@@ -11,4 +11,8 @@ class Task
   belongs_to :course
 
   has_many :answers
+
+  def log_devices
+    Pushwoosh.notify_all('Task created: "#{title}".')
+  end
 end
