@@ -54,6 +54,32 @@ i. Get user tasks
       "answers": 2,
     }
 
+## User courses
+
+i. Get user courses
+
+### Get user courses
+
+```GET  /api/v1/users/:user_id/courses```
+
+##### :user_id can be found in admin interface
+
+##### Parameters
+
+|      Name      |  Type  |               Description               |
+| -------------- | ------ | --------------------------------------- |
+| access_token   | string | Previously requested access token value |
+
+
+#### Response
+
+
+	[
+		{"id":"564fafa76b475d139c000003", "title":"Some Title"},
+		{"id":"564fafa76b475d139c000001", "title":"Some Title"},
+		{"id":"564fafa76b475d139c000004", "title":"Some Title"}
+	]
+
 ## Tasks
 
 i. Get a single task

@@ -18,6 +18,12 @@ class Api::V1::UsersController < Api::V1::BaseController
     render 'api/v1/tasks/index'
   end
 
+  # GET /users/1/courses
+  def courses
+    @courses = @user.courses
+    render 'api/v1/courses/index'
+  end
+
   private
     def set_user
       @user = User.find(params[:id])

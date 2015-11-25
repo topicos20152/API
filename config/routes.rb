@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         member do
           post :request_access_token
           get :tasks
+          get :courses
         end
       end
       resources :tasks, :only => [:show]

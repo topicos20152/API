@@ -30,4 +30,8 @@ class User
     tasks
   end
 
+  def courses
+    self.course_users.map(&:course)
+  end
+
 end
