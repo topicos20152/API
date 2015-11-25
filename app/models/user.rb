@@ -37,4 +37,9 @@ class User
     task_user.save
     puts "SAVED"
   end
+
+  def courses
+    self.course_users.map(&:course)
+  end
+
 end
