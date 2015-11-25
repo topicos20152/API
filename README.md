@@ -37,10 +37,12 @@ i. Get user tasks
 
 ##### Parameters
 
-|      Name      |  Type  |               Description               |
-| -------------- | ------ | --------------------------------------- |
-| access_token   | string | Previously requested access token value |
-
+|      Name       |   Type   |                       Description                     |
+| --------------  |  ------  | ----------------------------------------------------- |
+|  access_token   |  string  |       Previously requested access token value         |
+| has_attachments | boolean  |       True if you want tasks with attachement         |
+|   opened_date   | datetime |         Return tasks opened after this date           |
+|  delivery_date  | datetime | Return tasks with delivery date bigger then this date |
 
 #### Response
 

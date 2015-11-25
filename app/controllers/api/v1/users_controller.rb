@@ -15,6 +15,9 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def tasks
     @tasks = @user.tasks
+    @tasks = @tasks.where(:attachment.ne => nil) if params[:has_attachments] 
+    @tasks = @tasks.where(:opened_date.gte => params[:opened_date]) if params[:opened_date]
+    @tasks = @tasks.where(:delivery_date.gte => params[:delivery_date]) if params[:delivery_date]
     render 'api/v1/tasks/index'
   end
 

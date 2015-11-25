@@ -26,9 +26,9 @@ class User
   def tasks
     tasks = []
     self.course_users.map(&:course).each do |course|
-      tasks += course.tasks
+      tasks += course.tasks.map(&:id)
     end
-    tasks
+    Task.where(:id.in => tasks)
   end
 
   def check_task(task)
